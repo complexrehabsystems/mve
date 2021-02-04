@@ -132,6 +132,7 @@ print_build_timestamp (char const* application_name)
  * Windows: "All versions of windows run little-endian, period."
  * http://social.msdn.microsoft.com/Forums/en-US/windowsmobiledev/thread/04c92ef9-e38e-415f-8958-ec9f7c196fd3
  */
+#   define HOST_BYTEORDER_LE
 #if defined(_WIN32)
 #   define HOST_BYTEORDER_LE
 #endif
