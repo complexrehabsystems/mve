@@ -6,7 +6,7 @@ CXXFEATURES ?= -funsafe-math-optimizations -fno-math-errno -std=c++11
 CXXFLAGS ?= ${CXXWARNINGS} ${CXXINTRINSICS} ${CXXFEATURES} -g -O3 -I/opt/homebrew/include
 
 # Delete this if OpenMP is not available (e.g., OS X without gcc)
-OPENMP ?= -fopenmp
+# OPENMP ?= -fopenmp
 
 # Always compile programs and libs with multi-threading.
 CXXFLAGS += -pthread
