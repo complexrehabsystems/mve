@@ -1,5 +1,5 @@
 # Default values.
-CXX ?= g++
+CXX ?= clang
 CXXWARNINGS ?= -Wall -Wextra -Wundef -pedantic
 CXXINTRINSICS ?= -msse2 -msse3 -msse4 -mpopcnt
 CXXFEATURES ?= -funsafe-math-optimizations -fno-math-errno -std=c++11
