@@ -5,7 +5,7 @@ all:
 	${MAKE} -C sfm
 	${MAKE} -C dmrecon
 	$(MAKE) -C fssr
-	${MAKE} -C ogl
+	#${MAKE} -C ogl
 
 clean:
 	${MAKE} -C math $@

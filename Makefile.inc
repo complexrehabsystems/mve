@@ -1,9 +1,11 @@
 # Default values.
-CXX ?= clang
+CXX ?= g++
 CXXWARNINGS ?= -Wall -Wextra -Wundef -pedantic
-CXXINTRINSICS ?= -msse2 -msse3 -msse4 -mpopcnt
+#CXXINTRINSICS ?= -msse2 -msse3 -msse4 -mpopcnt
 CXXFEATURES ?= -funsafe-math-optimizations -fno-math-errno -std=c++11
-CXXFLAGS ?= ${CXXWARNINGS} ${CXXINTRINSICS} ${CXXFEATURES} -g -O3 -I/opt/homebrew/include
+TARGETARCH ?= -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk -miphoneos-version-min=9.0
+CXXFLAGS ?= ${CXXWARNINGS} ${CXXINTRINSICS} ${CXXFEATURES} -g -O3 -I/opt/vcpkg/installed/arm64-ios/include ${TARGETARCH}
+LDFLAGS ?= -L/opt/vcpkg/installed/arm64-ios/lib
 
 # Delete this if OpenMP is not available (e.g., OS X without gcc)
 # OPENMP ?= -fopenmp

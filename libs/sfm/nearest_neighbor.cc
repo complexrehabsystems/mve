@@ -39,8 +39,8 @@
 
 #include <algorithm>
 #include <iostream>
-#include <emmintrin.h> // SSE2
-#include <pmmintrin.h> // SSE3
+// #include <emmintrin.h> // SSE2
+// #include <pmmintrin.h> // SSE3
 
 #include "sfm/nearest_neighbor.h"
 
